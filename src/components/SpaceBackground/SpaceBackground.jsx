@@ -2,13 +2,10 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import Styles from './SpaceBackground.module.css';
 import { motion, useScroll } from 'framer-motion';
-import { WelcomeText } from '../WelcomeText/WelcomeText';
 export const SpaceBackground = () => {
 
     const backgroundRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        
-    });
+    const { scrollYProgress } = useScroll({});
 
     useEffect(
         ()=>{
@@ -50,17 +47,17 @@ export const SpaceBackground = () => {
 
             renderer.setAnimationLoop( animate );
             
-            // const handleResize = () => {
-            //     camera.aspect =  window.innerWidth / window.innerHeight;
-            //     camera.updateProjectionMatrix();
-            //     renderer.setSize( window.innerWidth - 16, 780);
-            // };
+            const handleResize = () => {
+                camera.aspect =  window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize( window.innerWidth - 16, 780);
+            };
     
-            // window.addEventListener('resize', handleResize);
+            window.addEventListener('resize', handleResize);
     
             return () => {
                 renderer.setAnimationLoop(null);
-                //window.removeEventListener('resize', handleResize);
+                window.removeEventListener('resize', handleResize);
                 renderer.dispose();
             };
         }, 
@@ -68,7 +65,7 @@ export const SpaceBackground = () => {
     );
 
     return (
-        <motion.canvas className={Styles.canvas} ref={backgroundRef}></motion.canvas>
+        <motion.canvas className={Styles.canvas} ref={backgroundRef} />
     );
 }
 

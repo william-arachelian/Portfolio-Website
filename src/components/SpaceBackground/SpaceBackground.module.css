@@ -1,8 +1,8 @@
 canvas {
     animation: 5s fade-in;
     z-index: 0;
-    position: 'sticky';
-    top: 0;
+    position: absolute;
+    /* top: 50; */
 }
 
 @keyframes fade-in {
