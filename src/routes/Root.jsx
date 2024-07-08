@@ -1,5 +1,6 @@
-import { WelcomeText, SpaceBackground, ProjectCard, Footer, Hero } from './../components/index.jsx';
-import { motion } from 'framer-motion';
+import {ProjectCard, LandingHero, Header } from './../components/index.jsx';
+import { motion, spring } from 'framer-motion';
+import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const Root = () => {
@@ -15,7 +16,6 @@ const Root = () => {
       padding: '40px',
       fontWeight: '500px',
       color: 'white',
-      borderTop: '1px solid',
       margin: 0,
     };
     
@@ -32,13 +32,14 @@ const Root = () => {
     };
     return (
       <>
-        {/* <SpaceBackground /> */}
-        {/* <WelcomeText /> */}
-        <Hero />
-        {/* <p style={{position: 'relative', top: '700px', fontSize: }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ante lacus, laoreet sed nisl ac, iaculis laoreet turpis. Fusce id purus mollis sem scelerisque facilisis. Nulla in lacus vitae elit pharetra porttitor laoreet a dui. Suspendisse et posuere urna. Aliquam laoreet quam tincidunt arcu sagittis finibus. Aliquam placerat sit amet ligula et iaculis. In purus nulla, suscipit id efficitur quis, feugiat nec nunc. Phasellus viverra lorem eget sem fermentum, eu venenatis eros sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam at iaculis leo. Donec ac dapibus erat.</p> */}
-
+        <Header offset={2770}/>
+        <LandingHero />
         <div 
-        style={{position: 'relative', marginTop: '2000px', background: 'black'}}
+          style={{
+            position: 'relative', 
+            marginTop: '2000px', 
+            background: 'black', 
+            }}
         >
           <motion.h2 
             ref={ref}

@@ -1,4 +1,4 @@
-import { ProjectCard, Footer } from './../components/index.jsx';
+import { ProjectCard, Header } from './../components/index.jsx';
 import { useInView } from 'react-intersection-observer';  
 import {motion} from 'framer-motion';
 const Projects = () => {
@@ -32,6 +32,7 @@ const Projects = () => {
       };
     return (
     <>
+        <Header offset={150}/>
         <motion.h1 
           ref={ref}
           style={titleStyles}
@@ -52,7 +53,6 @@ const Projects = () => {
           <ProjectCard name='test4' image='/vite.svg'/>
         </div>
       </div>
-      <Footer />
     </>
     );
 }
