@@ -53,12 +53,10 @@ const Root = () => {
           <div style={containerStyles}>
             <div style={columnStyles}>
               <ProjectCard name='Iconique' image='/iconique_thumbnail.webp'/>
-              <ProjectCard name='test3' image='/vite.svg'/>
             </div>
             <div style={columnStyles}>
               <ProjectCard name='Nutrition Scanner' image='/nutrition_thumbnail.webp'/>
               <ProjectCard name='Canvas Quiz Grader' image='/quizgrader_thumbnail.webp'/>
-              <ProjectCard name='test4' image='/vite.svg'/>
             </div>
           </div>
         </div>

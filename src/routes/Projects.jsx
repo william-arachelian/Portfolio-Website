@@ -23,6 +23,7 @@ const Projects = () => {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
+        // background: 'black',
       };
       
       const columnStyles = {

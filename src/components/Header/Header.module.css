@@ -1,7 +1,7 @@
 .header {
     position: sticky;
     display: flex;
-    background-color: rgb(0, 0, 0);
+    background-color: #272932;
     justify-content: space-between;
     align-items: center;
     margin: 0px;
