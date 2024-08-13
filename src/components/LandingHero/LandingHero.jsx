@@ -9,7 +9,7 @@ export const LandingHero = () => {
     const textColor = useTransform(scrollYProgress, [0,.3], ["#fff", "#000"]);
     const overlayWidth = useTransform(scrollYProgress, [0,.4], ["0%","100%"]);
 
-    return (
+    return (<>
     <motion.div className={Styles.landingWrapper}>
         <motion.div 
             className={Styles.landingOverlay}
@@ -26,7 +26,7 @@ export const LandingHero = () => {
                     opacity: 1,
                     rotateX: '0deg'
                 }}
-                transition={{duration: 1}}
+                transition={{duration: .7}}
                 viewport={{once: true}}
             >Hi, 👋</motion.h1>
             <motion.h1 
@@ -41,15 +41,14 @@ export const LandingHero = () => {
                     rotateX: '0deg'
                 }}
                 transition={{
-                    duration: 1,
-                    delay: 0.2
+                    duration: .7,
+                    delay: 0.3
                 }}
                 viewport={{once: true}}
             >I'm Will
             </motion.h1>
-            <motion.h1 className={Styles.landingSubText}>
-            CS + Math Student @ Stevens IT</motion.h1>
+            <motion.h1 className={Styles.landingSubText}>A CS + Math student and aspiring software engineer @ Stevens Institute of Technology</motion.h1>
         </motion.div>
     </motion.div>
-    );
+    </>);
 }

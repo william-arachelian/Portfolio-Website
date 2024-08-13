@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer';  
 import {motion} from 'framer-motion';
-import { Header } from '../components/index.jsx';
+import { Header, ProjectFooter } from '../components/index.jsx';
 const Iconique = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -75,10 +75,10 @@ const Iconique = () => {
             initial={{opacity: '0%'}}
             whileInView={{opacity: '100%'}}
             transition={{
-                duration: 1.2, 
-                delay: 1
+                duration: 1, 
+                
             }}
-            viewport={{once: true}}
+            viewport={{once: true, amount: .3}}
         >
             <img 
                 src='/Iconique-Img.png'
@@ -127,7 +127,7 @@ const Iconique = () => {
                 <h2 style={{fontFamily: 'monospace',fontSize: '18px',}}>
                     Context:
                 </h2>
-                <p style={{fontFamily: 'monospace',fontSize: '12px', marginBottom: '50px'}}>
+                <p style={{fontFamily: 'monospace',fontSize: '12px', marginBottom: '50px',}}>
                     CS 546 Final Project
                 </p>
                 </div>
@@ -145,6 +145,9 @@ const Iconique = () => {
                     </h2>
                 <p style={{fontFamily: 'monospace',fontSize: '12px',}}>
                     Express.js
+                </p>
+                <p style={{fontFamily: 'monospace',fontSize: '12px',}}>
+                    MongoDB
                 </p>
                 <p style={{fontFamily: 'monospace',fontSize: '12px',}}>
                     Handlebars

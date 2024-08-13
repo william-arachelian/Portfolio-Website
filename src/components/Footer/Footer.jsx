@@ -4,7 +4,7 @@ export const Footer = () => {
 
     const linkVariants = {
         whileHover: {
-            translateY: '-2px', 
+            scale: '-20px', 
             transition: {duration: .4},
         },  
     }
@@ -12,20 +12,40 @@ export const Footer = () => {
         <div className={Styles.footer}>
             <div className={Styles.footerColumn} style={{marginLeft: '35px'}}>
                 <h3 className={Styles.footerLogo}>Will Arachelian</h3>
+                <div>
                 <motion.a 
                     className={Styles.footerLink}
-                    href="/William_Arachelian_Resume_SWE.pdf"
+                    href="/William_Arachelian_Resume_24-25.pdf"
                     variants={linkVariants}
                     whileHover="whileHover"
-                >Resume</motion.a>
+                >Resume</motion.a   >
                  <motion.a 
                     className={Styles.footerLink} 
                     href="https://github.com/william-arachelian"
                     variants={linkVariants}
                     whileHover="whileHover"
                 >GitHub</motion.a>
+                <motion.a 
+                    className={Styles.footerLink} 
+                    href="https://www.linkedin.com/in/william-arachelian-681834251/"
+                    variants={linkVariants}
+                    whileHover="whileHover"
+                >LinkedIn</motion.a>
+                 <motion.a 
+                    className={Styles.footerLink} 
+                    href="mailto:warachel@stevens.edu"
+                    variants={linkVariants}
+                    whileHover="whileHover"
+                >Email</motion.a>
+                </div>
+
+               <p className={Styles.farewell}
+               
+               >谢谢, shnorhakalutyun, thank you ✌️</p>
             </div>
-            <div className={Styles.footerColumn}>
+
+
+            {/* <div className={Styles.footerColumn}>
                 <h3 className={Styles.footerTitle}>Projects</h3>
                 <motion.a 
                     className={Styles.footerLink} 
@@ -60,7 +80,7 @@ export const Footer = () => {
                     variants={linkVariants}
                     whileHover="whileHover"
                 >Email</motion.a>
-            </div>
+            </div> */}
         </div>
         
     );

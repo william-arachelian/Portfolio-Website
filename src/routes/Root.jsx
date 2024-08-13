@@ -11,7 +11,7 @@ const Root = () => {
     });
 
     const titleStyles = {
-      fontFamily: 'monospace',
+      fontFamily: 'Sans-Serif',
       fontSize: '50px',
       padding: '40px',
       fontWeight: '500px',
@@ -23,6 +23,8 @@ const Root = () => {
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-evenly',
+      backgroundColor: '#150811'
+
     };
     
     const columnStyles = {
@@ -38,8 +40,8 @@ const Root = () => {
           style={{
             position: 'relative', 
             marginTop: '2000px', 
-            background: 'black', 
-            }}
+            backgroundColor: '#150811'
+          }}
         >
           <motion.h2 
             ref={ref}

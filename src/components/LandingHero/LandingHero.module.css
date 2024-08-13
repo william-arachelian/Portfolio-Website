@@ -9,7 +9,7 @@
 
 .landingMsg1, .landingMsg2, .landingSubText {
     position: relative;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;  
     margin: 0 0 0 80px;   
     
@@ -21,11 +21,11 @@
     width: 500px;
 }
 .landingSubText {
-    text-align: right;
+    margin-top: 23px;
     color: black;
-    font-size: 50px;
-    width: 450px;
-    transform: translateX(800px);
+    font-size: 25px;
+    width: 550px;
+    /* transform: translateX(800px); */
 }
 
 .landingOverlay {
@@ -37,4 +37,3 @@
     /* z-index: 10px; */
 }
 
-    
